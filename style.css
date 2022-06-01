@@ -1,0 +1,158 @@
+body{
+    margin: 0;
+    /*background-image: linear-gradient(to right, gray, rgb(158, 155, 155), rgb(209, 207, 207), rgb(238, 236, 236));*/
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+main{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+}
+.website{
+    text-align: center;
+    margin: 20px;
+    box-shadow: 10px 10px 25px black;
+    background-color: whitesmoke;
+    border: 5px solid rgb(56, 56, 56);
+    font-size: 200%;
+    min-height: 50px;
+    min-width: 20%;
+    height: auto;
+}
+.cont{
+    margin: 150px auto 0px auto;
+    box-shadow: 0px 0px 160px white;
+    width: 50vw;
+    height: auto;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 50px;
+    z-index: 1;
+}
+.website div{
+    background-color: rgb(181, 181, 181);
+}
+
+/*star anims*/
+
+@keyframes move1{
+    0% {top: 800px; opacity: 0;}
+    5% {opacity: 0.3;}
+    25% {opacity: 0.5;}
+    100% {top: -5px; transform: rotate3d(1, 0, 1, 380deg); opacity: 0;}
+}
+@keyframes move12{
+    0% {top: 700px; opacity: 0; left: 100px}
+    5% {opacity: 0.3;}
+    25% {opacity: 0.5;}
+    100% {top: -5px; transform: rotate3d(0, 1, 1, 380deg); opacity: 0;}
+}
+@keyframes move2{
+    0% {top: 680px; opacity: 0;}
+    20% {opacity: 0.1;}
+    30% {opacity: 0.5;}
+    100% {top: -5px; transform: rotate3d(0, 1, 1, -180deg); opacity: 0;}
+}
+@keyframes move3{
+    0% {top: 600px; opacity: 0}
+    20% {opacity: 0.5;}
+    50% {transform: rotate(-100deg);}
+    100% {top: -50px; transform: rotate3d(1, 1, 1, 380deg);}
+}
+.stars div:nth-of-type(1){
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    background-color: whitesmoke;
+    animation-name: move1;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+.stars div:nth-of-type(2){
+    display: inline-block;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    opacity: 0;
+    background-color: whitesmoke;
+    animation-name: move2;
+    animation-duration: 32s;
+    animation-delay: 26s;
+    animation-iteration-count: infinite;
+}
+.stars div:nth-of-type(3){
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    height: 45px;
+    width: 45px;
+    animation-name: move3;
+    animation-duration: 30s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    background-color: whitesmoke;
+}
+.stars div:nth-of-type(4){
+    display: inline-block;
+    opacity: 0;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    animation-name: move3;
+    animation-duration: 30s;
+    animation-delay: 13s;
+    animation-iteration-count: infinite;
+    background-color: whitesmoke;
+}
+.stars2 div:nth-of-type(1){
+    display: inline-block;
+    position: relative;
+    height: 90px;
+    width: 90px;
+    opacity: 0;
+    background-color: whitesmoke;
+    animation-name: move12;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+.stars2 div:nth-of-type(2){
+    display: inline-block;
+    position: relative;
+    height: 70px;
+    width: 70px;
+    opacity: 0;
+    background-color: whitesmoke;
+    animation-name: move3;
+    animation-duration: 32s;
+    animation-delay: 26s;
+    animation-iteration-count: infinite;
+}
+.stars2 div:nth-of-type(3){
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    height: 85px;
+    width: 85px;
+    animation-name: move1;
+    animation-duration: 30s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    background-color: whitesmoke;
+}
+.stars2 div:nth-of-type(4){
+    display: inline-block;
+    opacity: 0;
+    width: 85px;
+    height: 85px;
+    position: relative;
+    animation-name: move2;
+    animation-duration: 30s;
+    animation-delay: 13s;
+    animation-iteration-count: infinite;
+    background-color: whitesmoke;
+}

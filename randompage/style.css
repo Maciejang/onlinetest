@@ -1,0 +1,28 @@
+div {
+    font-size: 60px;
+    left: 150px;
+    color:blueviolet;
+}
+u {
+    font-size: 50px;
+    display: inline-block;
+    position: relative;
+}
+img {
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes move {
+    from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 4000px 0;
+      }
+    }
+body{
+    animation: move 900s linear infinite;
+    overflow-x: hidden;
+}

@@ -1,0 +1,134 @@
+body{
+    background: linear-gradient(to right, blue, salmon, lightblue);
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+h1{
+    position: absolute;
+    left: 480px;
+    top: 200px;
+    font-size: 60px;;
+}
+@keyframes rotate {
+    100% {transform: rotate3d(1, 1, 1, 360deg);}
+}
+@keyframes anim {
+    100% {transform: rotate3d(0, 1, 1, 360deg);}
+}
+a:nth-of-type(1){
+    color: lavender;
+    font-size: 30px;;
+    position: absolute;
+    animation: rotate 3s linear infinite;
+    top: 390px;
+    left: 440px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+}
+b:nth-of-type(1){
+    position: absolute;
+    display: inline-block;
+    font-size: 60px;
+    top: 600px;
+    left: 180px;
+}
+u:nth-of-type(1){
+    position: absolute;
+    display: inline-block;
+    top: 800px;
+    left: 180px;
+    font-size: 50px;
+    animation: anim 50s linear infinite;
+}
+a:nth-of-type(2){
+    display: inline-block;
+    font-size: 5px;
+    top: 500px;
+    left: 900px;
+    position: absolute;
+}
+.calc{
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    top: 1400px;
+    left: 500px;
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    border: 3px solid black;
+    text-align: center;
+    color: black;
+    z-index: 2;
+    user-select: none;
+}
+.calc:hover{
+    cursor: pointer;
+}
+.calc1{
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    top: 1150px;
+    left: 315px;
+    height: 40px;
+    width: 80px;
+    background-color: gray;
+    border: 3px solid black;
+    text-align: center;
+    color: black;
+    z-index: 2;
+    user-select: none;
+}
+.calc1:hover{
+    cursor: pointer;
+}
+.calcscreen{
+    position: absolute;
+    background-color: black;
+    height: 150px;
+    width: 175px;
+    top: 1200px;
+    left: 515px;
+    z-index: 2;
+    font-size: 18px;
+    user-select: none;
+    text-align: center;
+    overflow: hidden;
+}
+div:nth-of-type(11){
+    width: 175px;
+}
+.phonebg{
+    top: 900px;
+    left: 490px;
+    height: 500px;
+    width: 195px;
+    z-index: 1;
+    position: relative;
+    background-color: darkslategray;
+    border: 5px solid gray;
+    user-select: none;
+}
+.but{
+    background: gray;
+    position: relative;
+    justify-self: center;
+    margin-left: 15px;
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+.but:hover{
+    cursor: pointer;
+}
+.but1{
+    top: 600px;
+    left: 70vw;
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    justify-items: center;
+    border-spacing: 30px;
+}

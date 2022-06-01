@@ -1,0 +1,22 @@
+@keyframes move {
+    100% {transform: rotate3d(0, 1, 0, 360deg);}
+}
+body{
+    background: radial-gradient(pink, lightblue, black);
+    overflow: hidden;
+}
+h1{
+    position: absolute;
+    font-size: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    left: 300px;
+    animation: move 3s linear infinite;
+    float: center;
+}
+a:nth-of-type(1){
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 50px;
+}

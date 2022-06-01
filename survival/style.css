@@ -1,0 +1,207 @@
+body{
+    overflow: hidden;
+}
+@keyframes lost {
+    0% {font-size: 0px; top: -200px;}
+    5% {font-size: 50px; transform: rotate3d(0, 1, 0, 180deg);}
+    20% {transform: rotate3d(1, 0, 0, 180deg);}
+    50% {transform: rotate3d(0, 0, 1, 180deg);}
+    60% {transform: rotate3d(1, 1, 1, 180deg);}
+    70% {top: 0px; transform: rotate3d(1, 1, 1, -360deg);} 
+}
+.dead{
+    animation: lost 5s linear 1;
+ }
+.room1 .rot1 {
+    position: absolute;
+    background: aqua;
+    height: 99vh;
+    width: 99vw;
+}
+.room1 .rot2 {
+    position: absolute;
+    background: aqua;
+    height: 99vh;
+    width: 99vw;
+}
+
+.room1 .rot3 {
+    position: absolute;
+    background: aqua;
+    height: 99vh;
+    width: 99vw;
+}
+
+.room1 .rot4 {
+    position: absolute;
+    background: aqua;
+    height: 99vh;
+    width: 99vw;
+}
+.floor{
+    top: 20vh;
+    height: 80vh;
+    width: 99vw;
+    position: absolute;
+}
+progress:nth-of-type(2)::-webkit-progress-value{
+    background: lightblue;
+ }
+ progress:nth-of-type(2)::-moz-progress-bar { 
+    background: lightblue; 
+ }
+ progress:nth-of-type(1)::-webkit-progress-value{
+    background: red;
+ }
+ progress:nth-of-type(1)::-moz-progress-bar { 
+    background: red; 
+ }
+progress{
+    position: absolute;
+    z-index: 3;
+    width: 400px;
+    display: inline-block;
+    height: 60px;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+progress:nth-of-type(1){
+    top: 84vh;
+}
+progress:nth-of-type(2){
+    top: 91vh;
+}
+span{
+    font-size: 50px;
+    position: absolute;
+    display: inline-block;
+    z-index: 4;
+}
+span:nth-of-type(1){
+    top: 84vh;
+}
+span:nth-of-type(2){
+    top: 91vh;
+}
+.die{
+    color: red;
+    opacity: 0;
+    display: inline-block;
+}
+.obj{
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+}
+.obj:hover{
+    cursor: pointer;
+}
+.inventory{
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    height: 180px;
+    width: 500px;
+    background-color: gray;
+    z-index: 4;
+    border: 2px solid black;
+}
+.slot1{
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    height: 80px;
+    min-width: 80px;
+    background-color: lightgray;
+    border-radius: 10px;
+    max-width: 110px;
+    width: auto;
+    text-align: center;
+    font-size: 40px;
+    user-select: none;
+}
+.slot2{
+    position: absolute;
+    border-radius: 10px;
+    top: 50px;
+    height: 80px;
+    left: 180px;
+    min-width: 80px;
+    max-width: 110px;
+    background-color: lightgray;
+    width: auto;
+    text-align: center;
+    font-size: 40px;
+    user-select: none;
+}
+.slot3{
+    position: absolute;
+    border-radius: 10px;
+    max-width: 110px;
+    top: 50px;
+    left: 330px;
+    height: 80px;
+    min-width: 80px;
+    background-color: lightgray;
+    width: auto;
+    text-align: center;
+    font-size: 40px;
+    user-select: none;
+}
+.inv{
+    display: inline-block;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    z-index: 4;
+    top: 76vh;
+    border: 3px dotted black;
+    color: white;
+    background: linear-gradient(to top, black, gray);
+    font-size: 35px;
+}
+.slot1:hover{
+    cursor: pointer;
+}
+.slot2:hover{
+    cursor: pointer;
+}
+.slot3:hover{
+    cursor: pointer;
+}
+.inv:hover{
+    cursor: pointer;
+}
+.slot1c{
+    position: absolute;
+    font-size: 30px;
+    left: 30px;
+    top: 20px;
+}
+.slot2c{
+    position: absolute;
+    font-size: 30px;
+    left: 180px;
+    top: 20px;
+}
+.slot3c{
+    position: absolute;
+    font-size: 30px;
+    left: 330px;
+    top: 20px;
+}
+.house{
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    width: 200px;
+    height: 200px;
+    background-image: url("house/lvl1.png");
+    background-repeat: no-repeat;
+    top: 30vh;
+    left: 45vw;
+    user-select: none;
+}
+.house:hover{
+    cursor: pointer;
+}

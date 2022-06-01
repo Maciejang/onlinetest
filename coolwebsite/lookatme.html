@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look at me</title>
+    <style>
+        @keyframes move {
+            30% {width: 150px;}
+            50% {transform: rotate3d(0, 1, 0, 360deg); width: 30px;}
+            80% {transform: rotate3d(1, 1, 1, 360deg);}
+        }
+        @keyframes moving {
+            100% {width: 500px;}
+        }
+        body{
+            background: radial-gradient(gray, cyan);
+        }
+        div:nth-last-of-type(1){
+            top: 200px;
+            left: 600px;
+            background: linear-gradient(to right, black, blue);
+            height: 200px;
+            width: 200px;
+            position: relative;
+            animation: move 5s linear infinite;
+        }
+        div:nth-of-type(1):hover{
+            cursor: pointer;
+        }
+        a:nth-of-type(1){
+        position: absolute;
+        font-size: 50px;
+        color: white;
+        top: 50px;
+        }
+        .move2{
+            animation: moving 5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">go back</a>
+    <div></div>
+
+    <script>
+        document.querySelectorAll("div")[0].addEventListener("click", _=> {
+            document.querySelectorAll("div")[0].style.width = "900px"
+        })
+    </script>
+</body>
+</html>
