@@ -11,8 +11,8 @@ body{
 }
 .refresh{
     position: absolute;
-    width: 50%;
-    left: 100%;
+    width: auto;
+    left: 23vw;
 }
 .displayItem{
     font-size: large;
