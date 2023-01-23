@@ -26,6 +26,7 @@ function itemColor(rarity){
 }
 
 function loadInventory(){
+    document.querySelector(".inventory").innerHTML = "";
     for(i=0; i < localStorage.length; i++){
         if(localStorage.getItem("item" + i)){
             const currentItem = JSON.parse(localStorage.getItem("item" + i));
