@@ -4,6 +4,11 @@ const itemList = ["likeFace", "kaktus", "knur"];
 const qualityList = ["Garbage", "Neat", "Nice", "Sloppy", "Elegant", "Superb"];
 const rarityList = ["common", "common", "common", "common", "common", "common", "common", "common", "common", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "rare", "rare", "rare", "rare", "rare", "epic", "epic", "epic", "legendary", "legendary", "exotic"];
 const effectList = ["Raining Tacos", "orbiting flies", "♂"];
+if(localStorage.getItem("recentNum")){
+    recentItemId = parseInt(localStorage.getItem("recentNum"));
+}else{
+    recentItemId = 0;
+}
 class Item {
     constructor(id, name, rarity, quality,  effect) {
       this.id = id;
@@ -62,6 +67,7 @@ function rollItem(itemName){
     let quality = qualityList[Math.floor(Math.random()*qualityList.length)];
 
     const uniqueItem = new Item(recentItemId, itemName, rarity, quality, effect);
+    localStorage.setItem("recentNum", recentItemId);
     window.localStorage.setItem(`item${recentItemId}`, JSON.stringify(uniqueItem));
     return [uniqueItem.ItemName(), rarity];
 }
