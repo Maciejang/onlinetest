@@ -9,6 +9,12 @@ body{
     grid-template-columns: auto auto auto;
     padding: 1%;
 }
+.reset{
+    position: absolute;
+    top: 10%;
+    width: auto;
+    left: 23vw;
+}
 .refresh{
     position: absolute;
     width: auto;
@@ -38,8 +44,8 @@ body{
     height: 20vh;
 }
 .itemImg{
-    max-width: 80%;
-    max-height: 80%;
+    width: 60%;
+    height: 60%;
     z-index: -1;
 }
 .itemInfo{

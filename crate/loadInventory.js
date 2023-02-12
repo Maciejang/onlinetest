@@ -46,3 +46,4 @@ loadInventory();
 document.querySelector(".refresh").addEventListener("click", _=>{
     loadInventory();
 })
+

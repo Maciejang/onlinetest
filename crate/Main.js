@@ -1,9 +1,9 @@
 let openCd = false
 let recentItemId = 0;
-const itemList = ["likeFace", "kaktus", "knur"];
+const itemList = ["likeFace", "kaktus", "super"];
 const qualityList = ["Garbage", "Neat", "Nice", "Sloppy", "Elegant", "Superb"];
-const rarityList = ["common", "common", "common", "common", "common", "common", "common", "common", "common", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "rare", "rare", "rare", "rare", "rare", "epic", "epic", "epic", "legendary", "legendary", "exotic"];
-const effectList = ["Raining Tacos", "orbiting flies", "♂"];
+const rarityList = ["common", "common", "common", "common", "common", "common", "common", "common", "common", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "uncommon", "rare", "rare", "rare", "rare", "rare", "epic", "epic", "epic", "legendary", "legendary", "exotic","super","super","super","super"];
+const effectList = ["Raining Tacos", "orbiting flies", "♂","★super★"];
 if(localStorage.getItem("recentNum")){
     recentItemId = parseInt(localStorage.getItem("recentNum"));
 }else{
@@ -51,6 +51,9 @@ function itemColor(rarity){
         case "common":
             return "#9b9c97";
         break;    
+        case "super":
+            return "#f2993f";
+        break;    
         default:
             return "#fffff";
             break;
@@ -86,7 +89,7 @@ document.querySelector("input[value='open']").addEventListener("click", _=>{
         document.querySelector(".crate .faceLeft").classList.add("FallAnimLeft");
         document.querySelector(".crate .faceRight").classList.add("FallAnimRight");
         document.querySelector(".crate .faceFront").classList.add("FallAnimFront");
-        document.querySelector(".crate .item").innerHTML = `<span class="itemInfo"></span> <img src="img/${OpenedItem}.png" class="itemImg">`
+        document.querySelector(".crate .item").innerHTML = `<span class="itemInfo"></span> <img src="img/${OpenedItem}.gif" class="itemImg">`
         document.querySelector(".crate .item").style.opacity = 0;
         setTimeout(() => {
             document.querySelector(".crate .item").style.opacity = 1;
@@ -104,4 +107,9 @@ document.querySelector("input[value='open']").addEventListener("click", _=>{
             }, 1500);
         }, 2500);
     }
+})
+
+document.querySelector(".reset").addEventListener("click", _=>{
+    localStorage.clear();
+    recentItemId = 0;
 })
