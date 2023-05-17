@@ -19,6 +19,9 @@ function itemColor(rarity){
         case "common":
             return "#9b9c97";
         break;    
+        case "super":
+            return "#f2993f";
+        break;  
         default:
             return "#fffff";
             break;
